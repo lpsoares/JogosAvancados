@@ -1,0 +1,11 @@
+site_name: Jogos Avançados
+site_url: https://lpsoares.github.io/JogosAvancados
+theme:
+  name: material
+
+nav:
+    - Home: index.md
+
+    - Aulas:
+        - "01 - Introdução": aulas/01-introducao/index.md
+        - "02 - Blockmesh": aulas/02-blockmesh/index.md
