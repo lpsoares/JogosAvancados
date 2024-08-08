@@ -1,0 +1,557 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://lpsoares.github.io/JogosAvancados/aulas/02-blockmesh/blockmesh/">
+      
+      
+      
+      
+      <link rel="icon" href="../../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.0, mkdocs-material-9.5.31">
+    
+    
+      
+        <title>Blockmesh - Jogos Avançados</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.3cba04c6.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    <body dir="ltr">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#blockmesh" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../.." title="Jogos Avançados" class="md-header__button md-logo" aria-label="Jogos Avançados" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Jogos Avançados
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Blockmesh
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+      <script>var media,input,key,value,palette=__md_get("__palette");if(palette&&palette.color){"(prefers-color-scheme)"===palette.color.media&&(media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']"),palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent"));for([key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../.." title="Jogos Avançados" class="md-nav__button md-logo" aria-label="Jogos Avançados" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    Jogos Avançados
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../.." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Home
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Aulas
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            Aulas
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../01-introducao/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    01 - Introdução
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    02 - Blockmesh
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#motivacao" class="md-nav__link">
+    <span class="md-ellipsis">
+      Motivação
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#conceito" class="md-nav__link">
+    <span class="md-ellipsis">
+      Conceito
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#aplicacao" class="md-nav__link">
+    <span class="md-ellipsis">
+      Aplicação
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Aplicação">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#entendendo-a-ferramenta" class="md-nav__link">
+    <span class="md-ellipsis">
+      Entendendo a ferramenta
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#blocagem-de-um-cenario" class="md-nav__link">
+    <span class="md-ellipsis">
+      Blocagem de um cenário
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+<h1 id="blockmesh">Blockmesh</h1>
+<h2 id="motivacao">Motivação</h2>
+<p>Você acabou de receber as diretrizes de criação de um novo nível do jogo que sua empresa está desenvolvendo. Com isso em mente, você abre sua pasta de assets e começa a criar o mapa nos mínimos detalhes. Você utiliza tudo o que acha que deve conter nele, caixas, móveis, árvores, decoração, entre outros. Passa um bom tempo escolhendo os shaders e texturas, e tem certeza que seu trabalho atende a todos os objetivos do documento que lhe foi entregue.</p>
+<p>Ao final de vários dias de trabalho, é feita uma revisão e você descobre que não é divertido se movimentar pelo mapa. Algumas áreas ficaram inacessíveis devido às colisões mal ajustadas, e o fluxo do nível não está funcionando como esperado.</p>
+<p>Esse é um problema comum quando se começa a criação de um nível diretamente com detalhes finais, sem um planejamento adequado das mecânicas e do layout básico. Como evitar isso?</p>
+<h2 id="conceito">Conceito</h2>
+<p>Blockmesh, Greybox, Whitebox ou Level Blockout. Como muitas coisas no desenvolvimento de jogos, temos nomes diferentes para nos referirmos ao mesmo conceito. Essa técnica consiste em criar um nível de jogo utilizando formas simples, que frequentemente chamamos de malhas primitivas. Cubos, cápsulas e cilindros são os mais utilizados, mas podemos incluir elementos mais avançados, como escadas e portas, dependendo da engine escolhida.</p>
+<p>O uso de formas, cores e texturas simples é essencial nesse estágio, pois nosso foco principal é entender as proporções e distâncias no jogo. Queremos visualizar a composição geral do mapa, testar a jogabilidade básica e garantir que o fluxo do nível esteja adequado antes de adicionar detalhes. Esse processo permite identificar e corrigir problemas de design de forma eficiente, garantindo que o mapa seja divertido e funcional antes de investir tempo na criação dos assets finais.</p>
+<p>Ainda durante o processo de blocagem, é possível identificar assets que serão repetidos mais vezes, permitindo ter uma visão melhor do escopo do projeto e onde ele pode ser expansível ou redutível antes de começar a produzir a arte final.</p>
+<p>Entenda o <code>blockmesh</code> como um croqui do seu nível final, que a cada iteração irá melhorar gradualmente até, por fim, inserir as artes finais. Lembre-se que, nesse primeiro momento, não devemos nos apegar a detalhes de texturas e iluminação. Essas são fases que virão depois e ajudarão muito na composição do nível. Começar com uma base forte é o melhor caminho.</p>
+<p>E já que estamos falando de uma base forte, é bom abordarmos um pouco sobre composição 3D. Assim como na composição clássica, podemos pensar em diferentes planos:</p>
+<ul>
+<li>
+<p><strong>Primeiro Plano:</strong> O plano que está mais próximo ao observador, serve para enquadrar o foco do jogador. Ele é usado para focar o jogador nos pontos de interesse ou nos pontos mais importantes, além de evitar que o que está mais próximo pareça vazio.</p>
+</li>
+<li>
+<p><strong>Centro de Interesse:</strong> A camada ou as camadas onde a parte predominante da composição se localiza. O ponto focal da composição não deve se confundir com o resto da cena, mas deve se destacar dos outros elementos. Planeje sua composição de forma que o ponto de interesse seja o primeiro que o observador (ou jogador) veja, construindo um objeto de identificação da cena, por exemplo: um castelo nas montanhas com uma torre em chamas. As cores do castelo devem se destacar das cores da montanha e ele deve ser feito para ser visto antes das montanhas.</p>
+</li>
+<li>
+<p><strong>Plano de Fundo:</strong> A camada que fecha a composição. A maioria dos planos de fundo são cenas do horizonte e do céu. O plano de fundo geralmente é feito com um esquema de cores mais claras, sem objetos muito detalhados, para ajudar o observador a focar no que é dominante.</p>
+</li>
+</ul>
+<p>Com isso em mente, já podemos iniciar a construção de nosso primeiro nível. </p>
+<h2 id="aplicacao">Aplicação</h2>
+<p>Toda parte de composição do seu jogo é dependente de diversos pontos a serem definidos por um guia de design, uma das opções mais básicas é: Qual o modo de câmera principal que irei utilizar nesse jogo?</p>
+<p>Será utilizado o modelo de terceira pessoa para a sequência a seguir, mas fique a vontade para escolher o que fizer mais sentido para seu projeto.</p>
+<blockquote>
+<p>Recomendamos o uso das templates FPS e TPS pois elas já implementam uma série de algoritmos para a câmera, que de outra forma teriamos de fazer manualmente. </p>
+</blockquote>
+<h3 id="entendendo-a-ferramenta">Entendendo a ferramenta</h3>
+<p><img alt="" src="../attachments/Pasted%20image%2020240805111919.png" /></p>
+<p>Assim que criamos o projeto baseado em um template, a UE5 cria um <strong>Level</strong> padrão. Se quiser pode testar se está tudo correto com o projeto clicando no <em>Play This Level</em> no topo do editor. </p>
+<p><img alt="" src="../attachments/Pasted%20image%2020240805112239.png" /></p>
+<p>Mas para a atividade crie um <strong>Level</strong> novo. Para isso abra seu <em>Content Drawer</em>, clique em uma área livre dele e selecione <code>Create Basic Asset &gt; Level</code>, ou ainda <code>File &gt; New Level</code></p>
+<p><img alt="" src="../attachments/Pasted%20image%2020240805112540.png" /></p>
+<p>Nomeie-o como melhor lhe agradar, e dê um duplo clique para abrir esse novo cenário. Caso a engine lhe peça para salvar-lo, basta clicar em <code>Save Selected</code></p>
+<p><img alt="" src="../attachments/Pasted%20image%2020240805112742.png" /></p>
+<p>Neste novo nível, temos apenas o nó raiz, visivel no outliner, assim não é possível visualizar nada. Vamos assim primeiro construir a base de iluminação para nosso nível. Precisamos colocar alguns <em><strong>Actors</strong></em>, para abrir a janela de <code>Place Actors</code> vá em <code>Window &gt; Place Actors</code> ou se preferir utilize o menu de <code>Quickly add to the project</code></p>
+<p><img alt="" src="../attachments/Pasted%20image%2020240805113715.png" /></p>
+<p><img alt="" src="../attachments/Pasted%20image%2020240805113646.png" /></p>
+<ul>
+<li>Light - <strong>Directional Light</strong>: Luz direcional simulando o sol, ilumina toda a cena de maneira uniforme e paralela.</li>
+<li>Visual Effects - <strong>Sky Atmosphere</strong>: Sistema que simula a dispersão atmosférica da luz.</li>
+<li>Visual Effects - <strong>Exponential Height Fog</strong>: Névoa que se acumula exponencialmente com a altura, criando profundidade atmosférica na cena.</li>
+</ul>
+<p>Esses elementos não são obrigatórios, mas com eles conseguimos ter uma experiência mais conhecida ao navegar pelo editor. Na imagem abaixo conseguimos visualiza a diferença sem e com esses <strong>actors</strong> inseridos na cena. </p>
+<p><img alt="" src="../attachments/Pasted%20image%2020240805114150.png" /></p>
+<p>Vamos começar a popular a cena com alguns elementos. Selecionando Shapes temos algumas opções de malhas "primitivas"</p>
+<p><img alt="" src="../attachments/Pasted%20image%2020240805114422.png" /></p>
+<p>Basta arrasta-los para a cena, e então, quando estiver selecionados teremos acesso aos seus detalhes. </p>
+<p><img alt="" src="../attachments/Pasted%20image%2020240805114601.png" /></p>
+<p>Para montar o nível com essas formas podemos alterar sua escala no componente transform</p>
+<p><img alt="" src="../attachments/Pasted%20image%2020240805115539.png" /></p>
+<p>Uma outra opção para montar criar o nível é utilizando os <em>Brushes</em> de Geometria da Unreal. </p>
+<p><img alt="" src="../attachments/Pasted%20image%2020240805115706.png" /></p>
+<p>Diferente das shapes, que são <em>Static Meshes</em>, esses brushes de geometria são elementos procedurais, que podemos modificar diretamente os parâmetros que os definem: </p>
+<p><img alt="" src="../attachments/Pasted%20image%2020240805120017.png" /></p>
+<p>Para além disso temos mais formas possíveis, cubos, cones, cilindro, escadas diversas e outros.</p>
+<p>Abaixo os parâmetros de outro tipo de geometria: </p>
+<p><img alt="" src="../attachments/Pasted%20image%2020240805120356.png" /></p>
+<p><img alt="" src="../attachments/Pasted%20image%2020240805120800.png" /></p>
+<p>Perceba que um dos parâmetros na aba de detalhes é o Brush Type, que por padrão é aditivo, mas podemos alterar para subtrativo, para fazer um rasgo em outro brush: </p>
+<p><img alt="" src="../attachments/Pasted%20image%2020240805121127.png" /></p>
+<p>Por fim, a UE tem um modo dedicado a edição desse brushes para rápida prototipação de níveis, logo abaixo no nome da aba, temos um <em>dropdown</em> que no momento está como <em><strong>Selection Mode</strong></em> , existe a opção <strong><em>Brush Editing</em></strong> que então podemos modificar faces, bordas e vértices diretamente. </p>
+<p><img alt="" src="../attachments/Pasted%20image%2020240805121828.png" /></p>
+<p>Podemos também utilizar a função de extrusão de elementos para criar objetos mais complexos: </p>
+<p><img alt="" src="../attachments/Pasted%20image%2020240805122143.png" /></p>
+<blockquote>
+<p>Quando utilizamos a escala do transform de um objeto, sempre que possível é preferível  manter uma escala uniforme, ou seja, o mesmo valor em todos os campos de escala, pois isso evita uma série de problemas que podem vir a ocorrer, principalmente se esse objeto for modificado dentro de jogo de alguma forma.</p>
+</blockquote>
+<h3 id="blocagem-de-um-cenario">Blocagem de um cenário</h3>
+<p>Agora que você já conhece a ferramenta, consegue fazer a blocagem de um cenário. </p>
+<p>Para melhor organização vou criar uma pasta no Outliner com nossa luz e efeitos especiais: </p>
+<p><img alt="" src="../attachments/Pasted%20image%2020240805132523.png" /></p>
+<p>Feito isso o primeiro passo é colocar um ponto de inicio para o jogador com o <em>Actor</em> <strong><em>Player Start</em></strong>, e algum objeto para ele ficar em cima: </p>
+<p><img alt="" src="../attachments/Pasted%20image%2020240805132909.png" /></p>
+<p><img alt="" src="../attachments/Pasted%20image%2020240805134719.png" /></p>
+<p>Para facilitar, vamos pensar no início de um jogo, vamos colocar um objetivo: </p>
+<p><img alt="" src="../attachments/Pasted%20image%2020240805134922.png" /></p>
+<p>Por enquanto não parece nada, mas aplicando os princípios de planos, conseguimos criar uma composição que seja interessante. </p>
+<p>Melhorando o ponto de interesse</p>
+<p><img alt="" src="../attachments/Pasted%20image%2020240805135635.png" /></p>
+<p>Criando um primeiro plano</p>
+<p><img alt="" src="../attachments/Pasted%20image%2020240805141502.png" /></p>
+<p>Adicionando elemento secundário no centro de interesse.  </p>
+<p><img alt="" src="../attachments/Pasted%20image%2020240805141337.png" /></p>
+<p>Inserindo elementos no plano de fundo</p>
+<p><img alt="" src="../attachments/Pasted%20image%2020240805142520.png" /></p>
+<p>Aos poucos e em um processo iterativo o nível começa a tomar forma. </p>
+<h1 id="missao-blockmesh">Missão Blockmesh:</h1>
+<p>Sua tarefa é criar a blocagem (blockmesh) de um nível de jogo. Esta etapa é crucial para garantir que o nível tenha um bom fluxo e que os principais problemas de design sejam identificados e corrigidos antes de investir tempo nos detalhes finais. </p>
+<ul>
+<li>Comece com um esboço no papel ou digitalmente. Pense na experiência do jogador e nos desafios que deseja criar.</li>
+<li>Utilize formas primitivas (cubos, cilindros, etc.) para construir o layout básico.</li>
+<li>Inclua elementos essenciais como plataformas, escadas, portas e obstáculos.</li>
+<li>Mantenha cores e texturas simples para focar na jogabilidade e no layout.</li>
+<li>Convide colegas para testar sua blocagem e fornecer feedback</li>
+</ul>
+<h3 id="entrega">Entrega:</h3>
+<p>Para entrega é necessário enviar uma build executável do seu mapa no Blackboard. </p>
+<h4 id="fazendo-a-build">Fazendo a Build:</h4>
+<p>Para fazer a build vá em <code>Edit &gt; Project Settings</code>, procure por <code>Maps &amp; Modes</code> e em <code>Default Map</code> selecione o mapa que você criou: </p>
+<p><img alt="" src="../attachments/Pasted%20image%2020240805144828.png" /></p>
+<p>Feito isso vá ao ícone Platforms e selecione <code>Windows &gt; Package Project</code></p>
+<p><img alt="" src="../attachments/Pasted%20image%2020240805145053.png" /></p>
+<p>Crie uma pasta para a build de seu projeto e selecione. Você deverá enviar essa pasta zipada. </p>
+<h1 id="referencias">Referências</h1>
+<h2 id="artigos">Artigos</h2>
+<p><a href="https://book.leveldesignbook.com/process/blockout">📑 The Level Design Book: Blockout</a><br />
+<a href="https://www.gamedeveloper.com/design/-level-design-process-01-cube-to-temple">📑 Level Design Process #01: Cube to Temple</a>
+<a href="https://www.youtube.com/watch?v=09r1B9cVEQY">📺 GDC 2018: Level Design Workshop: Blockmesh and Lighting Tips</a><br />
+<a href="https://www.youtube.com/watch?v=iNEe3KhMvXM">📺 GDC 2013: Ten Principles for Good Level Design</a><br />
+<a href="https://www.youtube.com/watch?v=R75g3elj7y4">📺 GDC 2014: Level Design in a Day: A Series of First Steps - Overcoming the Digital Blank Page</a><br />
+<a href="https://www.youtube.com/watch?v=RwlnCn2EB9o">📺 GMTK: How Level Design Can Tell a Story</a><br />
+<a href="https://www.youtube.com/watch?v=K-D2vuKMQhk">📺 Blizzcon 2017 - DesignCraft: Building Blocks of Level Design Panel</a><br />
+<a href="https://www.youtube.com/watch?v=syZ0Gd3PZD8">📺 Keeping Your Blockouts Simple</a><br />
+<a href="https://www.youtube.com/watch?v=-GyDjoyBQ4o&amp;t=16s">📺 UE5: Cube Grid</a><br />
+<a href="https://www.youtube.com/watch?v=ZfalgxLtNyI">📺 UE5: 3 Methods for Blocking Out Environments and Level Designs in UE5</a>
+<a href="https://www.google.com.br/books/edition/Level_Design/CT-EDgAAQBAJ?hl=en&amp;gbpv=1">📖 Totten, C. W. (2017). Level Design: Processes and Experiences. United Kingdom: CRC Press.</a><br />
+<a href="https://www.google.com.br/books/edition/A_Practical_Guide_to_Level_Design/DaSmEAAAQBAJ?hl=en&amp;gbpv=1">📖 Bauer, B. (n.d.). A Practical Guide to Level Design: From Theory to Practice, Diplomacy and Production. United States: CRC Press.</a><br />
+<a href="https://www.google.com.br/books/edition/Level_Up/8w_ETFmHrewC?hl=en&amp;gbpv=1">📖 Rogers, S. (2010). Level Up! The Guide to Great Video Game Design. United Kingdom: Wiley.</a></p>
+<p><a href="https://x.com/search?q=%23Blocktober&amp;src=typed_query&amp;f=top">#blocktober no Twitter/X</a><br />
+<a href="https://www.artstation.com/search?sort_by=relevance&amp;query=blocktober">Blocktober no Artstation</a></p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "../../..", "features": [], "search": "../../../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../../../assets/javascripts/bundle.fe8b6f2b.min.js"></script>
+      
+    
+  </body>
+</html>
