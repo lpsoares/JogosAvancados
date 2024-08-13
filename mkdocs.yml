@@ -9,3 +9,4 @@ nav:
     - Aulas:
         - "01 - Introdução": aulas/01-introducao/index.md
         - "02 - Blockmesh": aulas/02-blockmesh/index.md
+        - "03 - Terrenos": aulas/03-terrenos/index.md
