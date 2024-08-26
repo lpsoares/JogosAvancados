@@ -3,6 +3,17 @@ site_url: https://lpsoares.github.io/JogosAvancados
 theme:
   name: material
 
+markdown_extensions:
+  - nl2br
+  - admonition
+  - pymdownx.details
+  - pymdownx.superfences
+
+plugins:
+  - search
+  - callouts
+
+
 nav:
     - Home: index.md
 
@@ -16,4 +27,6 @@ nav:
         - "05 - Blueprints":
           - "Aula": aulas/05-blueprints/index.md
           - "Atividade Blueprints": aulas/05-blueprints/blueprints.md
+        - "06 - Inteligência Artificial":
+          - "Aula": aulas/06-ia/index.md
 
