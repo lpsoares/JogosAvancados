@@ -17,3 +17,4 @@ nav:
           - "Aula": aulas/05-blueprints/index.md
           - "Atividade Blueprints": aulas/05-blueprints/blueprints.md
         - "06 - IA": aulas/06-IA/index.md
+        - "07 - Materias e Shaders": aulas/07-MateriasShaders/index.md
