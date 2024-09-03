@@ -2,52 +2,62 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
          <loc>https://lpsoares.github.io/JogosAvancados/</loc>
-         <lastmod>2024-08-29</lastmod>
+         <lastmod>2024-09-03</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://lpsoares.github.io/JogosAvancados/aulas/01-introducao/</loc>
-         <lastmod>2024-08-29</lastmod>
+         <lastmod>2024-09-03</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://lpsoares.github.io/JogosAvancados/aulas/02-blockmesh/</loc>
-         <lastmod>2024-08-29</lastmod>
+         <lastmod>2024-09-03</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://lpsoares.github.io/JogosAvancados/aulas/02-blockmesh/blockmesh/</loc>
-         <lastmod>2024-08-29</lastmod>
+         <lastmod>2024-09-03</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://lpsoares.github.io/JogosAvancados/aulas/03-terrenos/</loc>
-         <lastmod>2024-08-29</lastmod>
+         <lastmod>2024-09-03</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://lpsoares.github.io/JogosAvancados/aulas/04-iluminacao/</loc>
-         <lastmod>2024-08-29</lastmod>
+         <lastmod>2024-09-03</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://lpsoares.github.io/JogosAvancados/aulas/05-blueprints/</loc>
-         <lastmod>2024-08-29</lastmod>
+         <lastmod>2024-09-03</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://lpsoares.github.io/JogosAvancados/aulas/05-blueprints/blueprints/</loc>
-         <lastmod>2024-08-29</lastmod>
+         <lastmod>2024-09-03</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://lpsoares.github.io/JogosAvancados/aulas/06-IA/</loc>
-         <lastmod>2024-08-29</lastmod>
+         <lastmod>2024-09-03</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://lpsoares.github.io/JogosAvancados/aulas/07-MateriasShaders/</loc>
-         <lastmod>2024-08-29</lastmod>
+         <lastmod>2024-09-03</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://lpsoares.github.io/JogosAvancados/aulas/08-Simulacoes/</loc>
+         <lastmod>2024-09-03</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://lpsoares.github.io/JogosAvancados/aulas/08-Simulacoes/simulacoes/</loc>
+         <lastmod>2024-09-03</lastmod>
          <changefreq>daily</changefreq>
     </url>
 </urlset>
