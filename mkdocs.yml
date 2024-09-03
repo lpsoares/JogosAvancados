@@ -18,3 +18,6 @@ nav:
           - "Atividade Blueprints": aulas/05-blueprints/blueprints.md
         - "06 - IA": aulas/06-IA/index.md
         - "07 - Materias e Shaders": aulas/07-MateriasShaders/index.md
+        - "08 - Simulações Físicas":
+          - "Aula": aulas/08-Simulacoes/index.md
+          - "Atividade Simulações": aulas/08-Simulacoes/simulacoes.md
