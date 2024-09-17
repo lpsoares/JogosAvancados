@@ -10,16 +10,19 @@ nav:
         - "01 - Introdução": aulas/01-introducao/index.md
         - "02 - Blockmesh":
             - "Aula": aulas/02-blockmesh/index.md
-            - "Atividade Blockmesh": aulas/02-blockmesh/blockmesh.md
+            - "Atividade Blockmesh": aulas/02-blockmesh/atividade.md
         - "03 - Terrenos": aulas/03-terrenos/index.md
         - "04 - Iluminação": aulas/04-iluminacao/index.md
         - "05 - Blueprints":
           - "Aula": aulas/05-blueprints/index.md
-          - "Atividade Blueprints": aulas/05-blueprints/blueprints.md
+          - "Atividade Blueprints": aulas/05-blueprints/atividade.md
         - "06 - IA": aulas/06-IA/index.md
         - "07 - Materias e Shaders": aulas/07-MateriasShaders/index.md
         - "08 - Simulações Físicas":
           - "Aula": aulas/08-Simulacoes/index.md
-          - "Atividade Simulações": aulas/08-Simulacoes/simulacoes.md
+          - "Atividade Simulações": aulas/08-Simulacoes/atividade.md
         - "09 - Animações": aulas/09-Animacoes/index.md
         - "10 - Audio": aulas/10-Audio/index.md
+        - "11 - C++":
+          - "Aula": aulas/11-C++/index.md
+          - "Atividade Simulações": aulas/11-C++/atividade.md
