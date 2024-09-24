@@ -27,4 +27,5 @@ nav:
           - "Aula": aulas/11-C++/index.md
           - "Atividade Simulações": aulas/11-C++/atividade.md
         - "12 - UI": aulas/12-UI/index.md
+        - "13 - Noise": aulas/13-Noise/index.md
         
