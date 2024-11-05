@@ -1,6 +1,5 @@
 # Animação Musical
 
-# Animação Musical:
 Crie um jogo onde você é possui alguma animação (idealmente de um personagem humanoide). Você também deverá criar sons na cena e esses sons deverão ser em ambiente (como uma música tocando) e efeitos sonoros (não vale os sóns já existentes em assets prontos)
 
 O projeto será avaliado se:
